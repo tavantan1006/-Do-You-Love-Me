@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Love Me ?</title>
+</head>
+<style>
+    .Container {
+        width: 600px;
+        height: 200px;
+        background-color: #dec5c5;
+        padding: 30px;
+        color: blue;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 30px;
+        position: relative ;
+    }
+
+    input {
+        padding: 10px;
+        margin-right: 30px;
+    }
+
+    .Container #no {
+        position: absolute;
+    }
+</style>
+<body>
+<div class="Container">
+    <h1>Do You Love Me ?</h1>
+    <input type="button" id="yes" onclick="showlove()" value="Yes">
+    <input type="button" id="no" value="No" onmousemove="showNo()">
+</div>
+<script>
+    function showlove() {
+        alert("Love You So Much !!");
+    }
+
+    function showNo() {
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('no').style.left = x + 'px';
+        document.getElementById('no').style.top = y + 'px';
+    }
+
+</script>
+</body>
+</html>
